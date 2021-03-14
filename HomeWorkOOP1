@@ -1,0 +1,233 @@
+  
+  // Task1 and 2.
+  
+  /*
+public class Triangle {
+	
+	
+	// Attributes
+		
+		int area;
+		 Triangle ( )
+		{
+			
+			 area= (4*2)/2;
+			
+		}
+
+}
+*/
+  
+  /*
+public class player {
+	
+	
+	String name;
+	int playerID;
+	
+		player (String i, int j) // Constructor
+		{
+			
+			name=i;
+			playerID=j;
+			
+		}
+}
+*/
+  /*
+  //***************************************
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// Task1
+		
+			player obj= new player ("Mosa", 2);
+			
+			System.out.println(" Task1**************\n\n The name of player is : " + obj.name + "\n The PlayerID is : " + obj.playerID);
+			
+		// Task2
+			
+			Triangle obj1= new Triangle();
+			System.out.println(" \nTask2*************** \nThe are of triangle is : "+ obj1.area);
+		*/
+    
+			
+			// *******************************************************************************************
+      
+      
+      // Task3  
+      
+      /*
+import java.util.*;
+
+public class Average {
+	
+	
+	
+	static void method(float x, float y,float z, float a , float b)
+	{
+		float avg= (x+y+z+a+b)/5;
+		 System.out.println(avg);
+		 
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		System.out.println("Enter the 5 number for which you get average.");
+		Scanner input= new Scanner(System.in);
+		float num1= input.nextFloat();
+		float num2= input.nextFloat();
+		float num3= input.nextFloat();
+		float num4= input.nextFloat();
+		float num5= input.nextFloat();	
+		
+		method( num1 ,  num2 ,  num3 , num4 , num5);
+		
+		
+		
+			
+			
+
+
+	}
+
+}
+*/
+
+// Task 4
+
+/*
+import java.util.*;
+
+public class Employee {
+	
+		static void method( String a, int b, String c)
+		{
+			
+			System.out.println("\t\t\t\t\tName    "  +  "   Year of Joining  " + " Addresss  ");
+			System.out.println("\t\t\t\t\t"+a+ "     "+"     " +b  +"            "+c);
+			
+			    //  String ret="\t\t\t\t\t"+a+ "     "+"     " +b  +"            "+c;
+			//return ret;
+		}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner var= new Scanner(System.in);
+		//String store="";
+		
+		System.out.println("For how mnay Employee you want to enter the data ?");
+		 int numOfemply = var.nextInt();
+		
+		 for(int i=1; i<numOfemply+1; i++)
+		 {
+			 System.out.println("Enter the data of "+ i + "Employee .");
+			 Scanner input= new Scanner(System.in);
+		System.out.println("Name : ");
+		String str= input.nextLine(); 
+		
+		System.out.println("Year : ");
+		int num = input.nextInt( );
+		
+		System.out.println("Address :");
+	    String out= input.nextLine();// I dont know how can we get two String input. 
+	    String out1= input.nextLine();
+		   //store= method(str, num, out1);
+	    method(str, num, out1);
+		 }
+		
+	//	System.out.println(store);
+		
+		
+	}
+
+}
+*/
+
+// task 5
+import java.util.*;
+
+public class Finder {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	
+		int array[]= new int[10];
+		Scanner input= new Scanner(System.in);
+		
+		//int num= input.nextInt();
+		
+		System.out.print("Enter the elements of arrray.");
+		for(int i= 0; i<10; i++)
+		{
+			array[i]= input.nextInt();
+			
+		}
+		System.out.print("The array is : \n{ ");
+		
+		for(int i= 0; i<10; i++)
+		{
+			System.out.print("  "+array[i]);
+			
+		}
+		
+		System.out.println(" }");
+		
+		int max= array[0];
+		int min = array[9];
+		
+		for(int i = 0; i<10; i++)
+		{
+			if (max<=array[i])
+			{
+				max=array[i];
+				
+			}
+			
+			if (min>=array[i])
+			{
+				min = array[i];
+			}
+			
+			
+		}
+		
+		System.out.println( "The greatest number in the array is : "+max + " \nThe lowest number in the array is : "+ min);
+		
+
+	}
+
+}
+
+      
+      
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+			
+			
+			
+	
+		
+		
+		
+	}
+
+}
