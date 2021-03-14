@@ -1,0 +1,64 @@
+
+ import java.util.*;
+
+
+public class Quiz {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner Input = new Scanner(System.in);
+		System.out.print("Enter the Years of your service :");
+		int years= Input.nextInt();
+		System.out.print("Enter your Salary :");
+		int salary= Input.nextInt();
+		double sum = 0, increment=0;
+		 
+		
+		if (years>3)
+		{
+			if (salary>=40000)
+			{	
+				increment=(salary/100)*2;
+				 
+				System.out.println(" 2 % increment in your salary and it is "+ increment);
+				sum= (((salary/100)*2) +(salary));
+				System.out.println("Your salary is " +sum);
+			}else if(salary>=20000)
+			
+			{	 increment=(salary/100)*2.5;
+				 
+				System.out.println("2.5 % increament in your salary and it is " +increment);
+				sum= (((salary/100)*2.5) +(salary));
+				System.out.println("Your salary is :" +sum);
+				
+			}else if(salary>= 15000)
+			{
+				increment=(salary/100)*4;
+				System.out.println("4.0 % increament in your salary and it is " + increment);
+				sum= (((salary/100)*4) +(salary));
+				System.out.println("Your salary is :" +sum);
+			}else if(salary>=10000)
+			{
+				increment=(salary/100)*7;
+				System.out.println("7.0 % increament in your salary and it is " + increment);
+				sum= (((salary/100)*7) +(salary));
+				System.out.println("Your salary is :" +sum);
+			}else
+			{
+				//empty
+			}
+		}
+		
+		
+		
+		
+		else
+		{
+			System.out.println("There is no increament in your salary because your servicce is less than 4 years.");
+		}
+		
+				
+
+	}
+
+}
