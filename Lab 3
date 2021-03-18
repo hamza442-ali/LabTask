@@ -1,0 +1,208 @@
+/*
+In current practice lesson we are going to develop a menu-driven application to manage simple bank
+account class. It supports following operations:
+• deposit money (to add an amount in current balance)
+• withdraw money (to subtract an amount from current balance)
+• check balance (to display current balance of customer)
+Note: Use Switch statement to enter choice of function from user. For initially create a function with
+name saving account to store the current balance of customer.
+*/
+
+//**********************************************************
+  // Task 2
+  
+
+
+import java.util.*;
+public class bankAccount {
+	
+	public void display()
+	{
+		
+		System.out.println("1. Deposit money\r\n"
+				          + "2. Withdraw money\r\n"
+				          + "3. Check balance");
+		
+		
+	}
+
+	public static void main(String[] args) {
+
+	    int currentAmount=5000;
+	    
+	    System.out.println(  "Your Current Amount is :" + currentAmount);
+	    bankAccount obj= new bankAccount();
+	    obj.display();
+	    
+	    Scanner input = new Scanner(System.in);
+	    
+	    System.out.println("Pleae choise the one opption or '0' to exit");
+	    int num= input.nextInt();
+	   
+	   
+	    
+	   
+	    
+	    
+	    switch (num)
+	    {
+	    case 1 :    
+	                 System.out.println(" Enter the amount which you want to deposite :" );
+	                 int num1= input.nextInt();
+	                 
+	    			int   add= currentAmount+num1;
+	    			
+	    			System.out.println( "Your new balance is " + add);
+	    			break;
+	    			
+	    
+	    
+	    case 2 :  
+	    	      System.out.println(" Enter the amount which you want to Withdraw :"   );
+	    	      int num2= input.nextInt();
+	            
+	         	int remainder= currentAmount-num2;
+	         	System.out.println( "Your new balance is " + remainder);
+	         	break;
+	    
+	    
+	    case 3 : System.out.println(" Your Current Balance is :" + currentAmount );
+	    break;
+	    
+	    case 0: System.out.println(" Bye! ");
+	    
+	    default : System.out.println("Pleae choise the correct Option .");
+	    
+	    
+	    
+	    
+	    
+	    }
+	    
+	    
+	}
+
+}
+
+//************************************************************************
+     // task 1
+/*
+    The dateType class has the following private members:
+
+• dMonth of type int;
+• dDay of type int;
+• dYear of type int;
+
+and implements the following public functions:
+
+1. Implement the appropriate setter and getter of a class.
+2. SetDate function to set the values of its member’s variables.
+3. PrintDate function that display the date of birth of a person.
+
+Use appropriate main () function that Test the functionality of class by Creating an array of 5 instance of
+dateType class.
+
+*/
+
+
+//**********************************************************
+
+    
+import java.util.*;
+
+public class dateType {
+
+	private int dDay;
+	private int dMonth;
+	private int dYear;
+	
+//	 public dateType(int day, int month ,int year)
+//	 {
+//		 
+//		 dDay=day;
+//		 dMonth=month;
+//		 dYear=year;
+//		 
+//		 
+//	 }
+//	 
+//	 
+//	 
+	 public void setDate( int day, int month, int year){
+		 
+		 this.dDay=day;
+		this. dMonth=month;
+		this.dYear=year;
+		 
+		
+		 
+	 }
+	 
+	 
+	 public int getDay()
+	 {
+		 return this.dDay;
+	 }
+	
+	 
+	 public int getmonth()
+	 {
+		 return this.dMonth;
+	 }
+	
+	 
+	 public int getyear()
+	 {
+		 return this.dYear;
+	 }
+	 
+	 
+	 final void printDate()
+	 {
+		 
+		 System.out.println(" The date of Birth is :" + dDay + " " + dMonth+ " "+ dYear);
+		 
+	 }
+	
+
+	public static void main(String[] args) {
+		
+	 
+		dateType obj = new dateType();
+		
+		dateType arr[]= new dateType[5];
+		
+           arr[0]= new dateType();
+	       arr[1]= new dateType();
+	       arr[2]= new dateType();
+	       arr[3]= new dateType();
+	       arr[4]= new dateType();
+
+	       
+		
+	    arr[0].setDate(24, 03, 2001); 
+		arr[1].setDate(19, 04, 2017);
+		arr[2].setDate(14, 06, 2008);
+		arr[3].setDate(4, 3, 2005);
+		arr[4].setDate(2, 03, 2005);
+		
+		
+		arr[0].printDate();
+		arr[1].printDate();
+		arr[2].printDate();
+		arr[3].printDate();
+		arr[4].printDate();
+		
+		
+		
+		
+		
+
+	}
+
+}
+//***********************************************************************
+
+
+
+
