@@ -1,0 +1,72 @@
+package secondPakage;
+
+
+	abstract class shape{
+		
+	public  abstract double area();	
+		
+		
+		
+	}
+	
+	
+	class rectangle extends shape{
+		
+		double length;
+		double breadth;
+		
+		rectangle(double a,double b){
+			
+			length=a;
+			breadth=b;
+			
+		}
+	public	double area() {
+			
+		return length*breadth;
+			
+			
+		}
+
+	
+		
+		
+	}
+	
+	class circle extends shape{
+		
+		
+		double r;
+		
+		circle(double radius){
+			
+			r=radius;
+		}
+		public double area() {
+		
+		return r*r*3.14;
+		}
+
+		
+	}
+
+
+
+
+
+
+public class question10 {
+
+	public static void main(String[] args) {
+		
+		
+		
+		rectangle obj= new rectangle (3,4);
+		System.out.println("The area of rectangle is: " + obj.area());
+		circle obj2= new circle(5);
+		System.out.println("The area of circle is:" + obj2.area());
+		
+
+	}
+
+}
