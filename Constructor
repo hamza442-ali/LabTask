@@ -1,0 +1,65 @@
+package abstractAndConcreet;
+
+public class constructMain {
+
+	public static void main(String[] args) {
+	
+			constructA obj= new constructA();
+			constructA obj2= new constructA( 12, "HAmza");
+			constructA obj3 =  new constructA('H' , 34, "ALi");
+      obj3.number;    // the value should be 34 because we call the "number " from object of 3 and whic constructor's objrct is call its value is print .
+			
+			System.out.println(obj2.number  + obj3.number);   // we can add the object from two difference constructors.
+			 
+			System.out.println( obj.methid());  // 
+
+	}
+
+}
+//************************************
+package abstractAndConcreet;
+
+public class constructA {
+	
+	
+	String name;
+	char  size;
+	static int number;
+	float num;
+	
+	
+		constructA(){
+			System.out.println("Unperimetrize constructor");
+		}
+		
+		
+		constructA(int number, String name){
+			
+			this.number=number;
+			this.name=name;
+			System.out.println("construrct 2");
+			}
+		
+		
+		constructA(char size, int number , String name){
+			
+			this.size=size;
+			this.number=number;
+			this.name=name;
+			System.out.println("Construct 3");
+
+}
+		
+		
+		static int methid() {
+			return number;
+		
+		}
+		
+		
+		
+		
+		
+}
+
+		
