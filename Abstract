@@ -1,0 +1,68 @@
+package abstractAndConcreet;
+ 
+abstract class Base{
+	
+	
+	void fun() {
+		
+		System.out.println("The conatructor of Abstract class");
+	}
+	
+	
+	public abstract void  method();
+}
+
+	 class Derived extends Base{
+		 
+		 
+		 String name;
+		 Derived(String name){
+			 this.name=name;
+			 
+			 
+		 }
+		
+		
+		public void method() {
+			
+			
+			System.out.println("Method of Derived " + name);
+			
+		}
+		
+		
+	}
+	
+	 class dev extends Base{
+		 
+		 int number ;
+		 
+		 dev(int number){
+			 
+			 this.number=number;
+		 }
+		
+		public void method() {
+			
+			
+			
+			System.out.println("Method of Dev " + number);
+		}
+	}
+
+
+public class abstract2 {
+
+	public static void main(String[] args) {
+		
+		Base obj= new Derived("Hamza");
+		Base obj2= new dev(24);
+		obj.method();
+		obj2.method();
+		obj2.fun();
+	
+	
+
+	}
+
+}
